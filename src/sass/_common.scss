@@ -1,0 +1,88 @@
+// ====================================================
+// 全局变量 函数 mixin定义
+
+// ====================================================
+// 根据项目需求重置部分全局样式
+// 全局函数
+
+@function fitPx($px) {
+  @return $px / $baseSize * 1rem;
+}
+
+html, body {
+  font: normal 14px PingFangSC-Regular, "Microsoft Yahei", sans-serif;
+  background: #fff;
+  height: 100%;
+}
+
+button, input {
+  font: normal 14px "Microsoft Yahei", sans-serif;
+}
+
+::-webkit-input-placeholder { 
+  //color: ;
+  font-size: 16px;
+  letter-spacing: normal;
+  font-weight: normal;
+}
+
+.clearline {
+  font-size: 0;
+}
+
+// ====================================================
+// layout classes
+
+// grid system
+.row {
+  width: 100%;
+  clear: both;
+  [class^="col-"] {
+    float: left;
+  }
+  .col-left {
+    float: left;
+  }
+  .col-right {
+    float: right;
+  }
+  .col-center {
+    text-align: center;
+  }
+}
+
+@for $i from 1 through 12 {
+  .row .col-#{$i} {
+    width: $i / 12 * 100 + %;
+  }
+}
+
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+
+// alignments
+.row-center {
+  text-align: center;
+}
+.row-left {
+  text-align: left;
+}
+.row-right {
+  text-align: right;
+}
+
+.icon, .btn {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media screen and (max-device-width: 480px){
+  body{
+    -webkit-text-size-adjust: none;
+  }
+}

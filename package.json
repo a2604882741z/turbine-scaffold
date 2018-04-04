@@ -1,0 +1,65 @@
+{
+  "name": "turbine-scaffold",
+  "version": "1.0.0",
+  "description": "turbine's scaffold that help you to initialize your project quickly",
+  "main": "webpack.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "webpack --config ./build/webpack.prod.js",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open --config ./build/webpack.dev.js",
+    "launch": "node build/launch.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a2604882741z/xjs-framework.git"
+  },
+  "keywords": [
+    "ES6",
+    "SPA",
+    "MVVM"
+  ],
+  "author": "Ricky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a2604882741z/xjs-framework/issues"
+  },
+  "homepage": "https://github.com/a2604882741z/xjs-framework#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "autoprefixer": "^8.2.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "imagemin-webpack-plugin": "^2.1.0",
+    "mockjs": "^1.0.1-beta3",
+    "postcss-loader": "^2.1.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "node-sass": "^4.7.2",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1",
+    "webpack-spritesmith": "^0.4.0",
+    "html-loader": "^0.5.5",
+    "@babel/runtime": "^7.0.0-beta.42",
+    "babel-loader": "^8.0.0-beta.2",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "turbine-validation": "^1.0.4",
+    "@a2604882741z/turbine": "^1.1.8"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie < 11",
+    "last 2 versions",
+    "> 1%",
+    "last 3 iOS versions"
+  ]
+}
